@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stylos/styles_dashboard.css">
+    <link rel="stylesheet" href="../stylos/infraestrutura_estilo.css">
+    <title>Infraestrutura</title>
+</head>
+<body>
+    <div class="back-button">
+        <a href="#" onclick="history.back()">←</a>
+    </div>
+    <div class="header">
+        <h1>Infraestrutura Escolar</h1>
+    </div>
+
+    <div class="region-selector">
+        <label for="estado">Selecione o Estado:</label>
+        <select id="estado" class="select-regiao">
+            <option value="">Selecione um estado</option>
+            <option value="12">Acre</option>
+            <option value="27">Alagoas</option>
+            <option value="16">Amapá</option>
+            <option value="13">Amazonas</option>
+            <option value="29">Bahia</option>
+            <option value="23">Ceará</option>
+            <option value="53">Distrito Federal</option>
+            <option value="32">Espírito Santo</option>
+            <option value="52">Goiás</option>
+            <option value="21">Maranhão</option>
+            <option value="51">Mato Grosso</option>
+            <option value="50">Mato Grosso do Sul</option>
+            <option value="31">Minas Gerais</option>
+            <option value="15">Pará</option>
+            <option value="25">Paraíba</option>
+            <option value="41">Paraná</option>
+            <option value="26">Pernambuco</option>
+            <option value="22">Piauí</option>
+            <option value="33">Rio de Janeiro</option>
+            <option value="24">Rio Grande do Norte</option>
+            <option value="43">Rio Grande do Sul</option>
+            <option value="11">Rondônia</option>
+            <option value="14">Roraima</option>
+            <option value="42">Santa Catarina</option>
+            <option value="35">São Paulo</option>
+            <option value="28">Sergipe</option>
+            <option value="17">Tocantins</option>
+        </select>
+    </div>
+    
+    <div class="dashboard">
+        <div class="estado-info">
+            <div class="estado-header">
+                <h2 id="estado-nome">Selecione um estado</h2>
+                <img id="estado-bandeira" src="" alt="Bandeira do estado" style="display: none;">
+            </div>
+            <p id="estado-escolas">-</p>
+        </div>
+
+        
+
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-icon">
+                    <img src="../assets/biblioteca.png" alt="Biblioteca">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Bibliotecas</h3>
+                    <p class="card-value" id="biblioteca-valor">0%</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <img src="../assets/informatica.png" alt="Laboratório de Informática">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Lab. de Informática</h3>
+                    <p class="card-value" id="lab-info-valor">0%</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <img src="../assets/banda_larga.png" alt="Internet">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Banda Larga</h3>
+                    <p class="card-value" id="internet-valor">0%</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <img src="../assets/quadra.png" alt="Quadra de Esportes">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Quadra de Esportes</h3>
+                    <p class="card-value" id="quadra-valor">0%</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <img src="../assets/esgoto.png" alt="Esgoto">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Esgoto (rede pública)</h3>
+                    <p class="card-value" id="esgoto-valor">0%</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <img src="../assets/ciencia.png" alt="Laboratório de Ciências">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Lab. Ciências</h3>
+                    <p class="card-value" id="lab-ciencias-valor">0%</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <img src="../assets/alimentacao.png" alt="Alimentação">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Alimentação Fornecida</h3>
+                    <p class="card-value" id="alimentacao-valor">0%</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-icon">
+                    <img src="../assets/tv.png" alt="TV">
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">TV</h3>
+                    <p class="card-value" id="tv-valor">0%</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/infraestrutura.js"></script>
+</body>
+</html>

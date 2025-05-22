@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../stylos/styles_dashboard.css">
+    <link rel="stylesheet" href="../stylos/infraestrutura_estilo.css">
+    <title>Evasão Escolar</title>   
+</head>
+
+<body>
+    <div class="header">
+        <div class="back-button">
+            <a href="#" onclick="history.back()">←</a>
+        </div>
+        <h1>Evasão Escolar</h1>
+    </div>
+
+    <div class="region-selector">
+        <label for="regiao">Selecione a Região:</label>
+        <select id="regiao" class="select-regiao">
+            <option value="norte" selected>Norte</option>
+            <option value="nordeste">Nordeste</option>
+            <option value="centro-oeste">Centro-Oeste</option>
+            <option value="sudeste">Sudeste</option>
+            <option value="sul">Sul</option>
+        </select>
+    </div>
+
+    <div class="charts-container">
+        <div class="chart-wrapper">
+            <div class="chart-content">
+                <canvas id="motivosChart"></canvas>
+                <div class="error-message" id="motivosError" style="display: none">
+                    <p>Erro ao carregar os dados. Tente novamente mais tarde.</p>
+                    <button class="retry-button" onclick="window.location.reload()">Tentar Novamente</button>
+                </div>
+                <div class="loading-message" id="motivosLoading" style="display: none">
+                    <p>Carregando dados...</p>
+                </div>
+            </div>
+        </div>
+        <div class="chart-wrapper">
+            <div class="chart-content">
+                <canvas id="estadosChart"></canvas>
+                <div class="error-message" id="estadosError" style="display: none">
+                    <p>Erro ao carregar os dados. Tente novamente mais tarde.</p>
+                </div>
+                <div class="loading-message" id="estadosLoading" style="display: none">
+                    <p>Carregando dados...</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cards-container">
+            <div class="card">
+                <div class="card-title">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/evasao_escolar.js"></script>
+</body>
+
+</html>
