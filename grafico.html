@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gráficos - Evasão Escolar e IDEB</title>
+  <link rel="stylesheet" href="stylos/stylos.css">
+  <style>
+    .grafico-vertical {
+      display: flex;
+      align-items: flex-end;
+      height: 220px;
+      max-width: 600px;
+      margin: 40px auto 30px auto;
+      border-left: 2px solid #888;
+      border-bottom: 2px solid #888;
+      padding-left: 40px;
+      position: relative;
+      background: repeating-linear-gradient(
+        to top,
+        #e0e0e0 0 2px,
+        transparent 2px 44px
+      );
+    }
+    .barra {
+      flex: 1;
+      margin: 0 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    .barra-valor {
+      width: 32px;
+      border-radius: 6px 6px 0 0;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      color: #fff;
+      font-size: 13px;
+      font-weight: bold;
+      transition: height 0.3s;
+      background: #7c3aed; /* Roxo */
+    }
+    .barra-label {
+      margin-top: 6px;
+      font-size: 12px;
+      text-align: center;
+      width: 60px;
+      word-break: break-word;
+      color: #222;
+    }
+    /* Linhas horizontais (grades) */
+    .grafico-vertical::before {
+      content: '';
+      position: absolute;
+      left: 36px;
+      bottom: 44px;
+      width: calc(100% - 36px);
+      border-top: 1px dashed #bbb;
+      pointer-events: none;
+    }
+    .grafico-vertical .y-labels {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      height: 176px;
+      justify-content: space-between;
+      font-size: 12px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">REBB</div>
+    <div class="user-icon">👤</div>
+  </header>
+  <main>
+    <h2 style="text-align:center; margin: 2rem 0 1rem 0;">Evasão Escolar</h2>
+    <!-- Gráfico 1: Evasão Escolar por Ano -->
+    <h3 style="text-align:center;">principais motivos</h3>
+    <div style="position:relative;">
+      <div class="grafico-vertical">
+        <div class="y-labels">
+          <span>10</span>
+          <span>7.5</span>
+          <span>5</span>
+          <span>2.5</span>
+          <span>0</span>
+        </div>
+        <div class="barra">
+          <div class="barra-valor" style="height: 120px;">8.2%</div>
+          <div class="barra-label">2019</div>
+        </div>
+        <div class="barra">
+          <div class="barra-valor" style="height: 90px;">6.1%</div>
+          <div class="barra-label">2020</div>
+        </div>
+        <div class="barra">
+          <div class="barra-valor" style="height: 66px;">4.5%</div>
+          <div class="barra-label">2021</div>
+        </div>
+        <div class="barra">
+          <div class="barra-valor" style="height: 48px;">3.3%</div>
+          <div class="barra-label">2022</div>
+        </div>
+      </div>
+    </div>
+    <!-- Gráfico 2: IDEB por Ano -->
+    <h3 style="text-align:center;">Taxa de Abandono Escolar</h3>
+    <div style="position:relative;">
+      <div class="grafico-vertical">
+        <div class="y-labels">
+          <span>7</span>
+          <span>5.6</span>
+          <span>4</span>
+          <span>2.5</span>
+          <span>1</span>
+        </div>
+        <div class="barra">
+          <div class="barra-valor" style="height: 40px;">2.7</div>
+          <div class="barra-label">2019</div>
+        </div>
+        <div class="barra">
+          <div class="barra-valor" style="height: 80px;">4.1</div>
+          <div class="barra-label">2020</div>
+        </div>
+        <div class="barra">
+          <div class="barra-valor" style="height: 120px;">6.2</div>
+          <div class="barra-label">2021</div>
+        </div>
+        <div class="barra">
+          <div class="barra-valor" style="height: 100px;">5.3</div>
+          <div class="barra-label">2022</div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:2rem;">
+      <a href="index.html" class="btn-vermais">Voltar</a>
+    </div>
+  </main>
+</body>
+</html>
